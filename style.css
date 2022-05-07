@@ -1,6 +1,7 @@
 /*====== GERAL =============*/
 * {
     margin:0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -18,6 +19,12 @@
     --nav-height: 7.2rem;
 }
 
+html,
+body{
+    width: 100%;
+    height: 100%;
+}
+
 body {
     font-family: 'DM Sans';
     font-size: 1.6rem;
@@ -32,6 +39,10 @@ body {
     padding-inline: 2.4rem;
 }
 
+ul {
+    list-style: none;
+}
+
 /*========= HEADER ===============*/
 header {
     margin-top: calc(4.1rem + var(--nav-height));
@@ -39,7 +50,7 @@ header {
 
 header::before {
     content: "";
-    width: 100vw;
+    width: 100%;
     height: calc(108rem + var(--nav-height));
     background-color: var(--brand-light);
     display: block;
@@ -160,5 +171,96 @@ nav.scroll svg:nth-child(1) path {
 }
 
 nav.scroll svg:nth-child(2) path {
+    stroke: white;
+}
+
+/*=========== MENU-EXPANDED ================*/
+body.menu-expanded {
+    overflow: hidden;
+}
+
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+    opacity: 0;
+    visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+body.menu-expanded .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--primary-color);
+
+    width: 100vw;
+    height: 100vh;
+
+    padding-top: var(--nav-height);
+}
+
+body.menu-expanded nav {
+    position: relative;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
+.menu ul:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+
+    margin-top: 6rem;
+
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+}
+
+.menu ul li a{
+    color:white;
+    text-decoration: none;
+}
+ 
+.menu .button {
+    background: white;
+    border-radius: 4rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: var(--primary-color);
+
+    display: inline-block;
+    padding: 1.6rem 3.2rem;
+
+    margin-top: 4.8rem;
+    margin-bottom: 8rem;
+}
+
+body.menu-expanded .logo,
+body.menu-expanded button{
+    position: relative;
+    z-index: 100;
+}
+
+body.menu-expanded .logo path{
+    fill: white;
+}
+
+body.menu-expanded button path{
     stroke: white;
 }
