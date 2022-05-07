@@ -30,12 +30,12 @@ body {
     font-size: 1.6rem;
     
     text-align:center;
+    overflow: overlay;
 }
 
 .wrapper {
     width: 37.5rem;
-    margin-right: auto;
-    margin-left: auto;
+    margin-inline: auto;
     padding-inline: 2.4rem;
 }
 
@@ -170,8 +170,14 @@ nav.scroll svg:nth-child(1) path {
     fill: white;
 }
 
-nav.scroll svg:nth-child(2) path {
+nav.scroll button path {
     stroke: white;
+}
+
+nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 /*=========== MENU-EXPANDED ================*/
@@ -179,6 +185,9 @@ body.menu-expanded {
     overflow: hidden;
 }
 
+body.menu-expanded > :not(nav) {
+    display: none;
+}
 .menu,
 .close-menu,
 body.menu-expanded .open-menu {
