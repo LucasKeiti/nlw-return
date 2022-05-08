@@ -13,10 +13,16 @@
     --brand-beige: hsl(39, 100%, 97%);
     --brand-light: hsl(148, 23%, 89%);
 
+    --bg-light: hsl(180, 14%, 97%, 1);
+
 
     font-size: 62.5%; /*1rem = 10px*/
 
     --nav-height: 7.2rem;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 html,
@@ -31,6 +37,7 @@ body {
     
     text-align:center;
     overflow: overlay;
+    background-color: var(--bg-light);
 }
 
 .wrapper {
@@ -43,12 +50,16 @@ ul {
     list-style: none;
 }
 
-/*========= HEADER ===============*/
-header {
-    margin-top: calc(4.1rem + var(--nav-height));
+section {
+    padding-block: 10rem;
 }
 
-header::before {
+/*========= HEADER ===============*/
+#home {
+    padding-top: calc(4.1rem + var(--nav-height));
+}
+
+#home::before {
     content: "";
     width: 100%;
     height: calc(108rem + var(--nav-height));
@@ -62,20 +73,20 @@ header::before {
 
 }
 
-header h4 {
+#home h4 {
     font-size: 1.4rem;
     color: var(--primary-color);
     margin-bottom: 1.6rem;
 }
 
-header h1 {
+#home h1 {
     font-size: 3.4rem;
     color: var(--headline);
     line-height: 130%;
     margin-bottom: 2.4rem; 
 }
 
-header p {
+#home p {
     font-size: 1.8rem;
     line-height: 150%;
     font-weight: 400;
@@ -83,7 +94,7 @@ header p {
     margin-bottom: 3.2rem;  
 }
 
-header button {
+#home button {
     background: var(--primary-color);
     border:none;
     border-radius: 4rem;
@@ -107,7 +118,7 @@ header button {
     margin-left: auto;
 }
 
-.stats {
+#home .stats {
     width: 32.7rem;
     padding-block: 4rem;
     margin-inline: auto;
@@ -122,7 +133,7 @@ header button {
     gap: 6rem;
 }
 
-.stat h3 {
+#home.stat h3 {
     font-size: 4.8rem;
     color: var(--headline);
     line-height: 130%;
@@ -130,14 +141,14 @@ header button {
     margin-bottom: 0.4rem;
 }
 
-.stat p {
+#home .stat p {
     margin: 0;
     color: var(--primary-color);
     font-size: 1.6rem;
     line-height: 150%;
 }
 
-header img {
+#home img {
     width: 26.4rem;
     display:block;
     margin-inline: auto;
@@ -181,6 +192,10 @@ nav button {
 }
 
 /*=========== MENU-EXPANDED ================*/
+
+.menu{
+    /*transform: translateY(100%);*/
+}
 body.menu-expanded {
     overflow: hidden;
 }
@@ -272,4 +287,45 @@ body.menu-expanded .logo path{
 
 body.menu-expanded button path{
     stroke: white;
+}
+
+/*============= SERVICES ===================*/
+
+#services header h4{
+    font-size: 1.4rem;
+    line-height: 150%;
+    letter-spacing: 0.08rem;
+    color: var(--primary-color);
+
+    text-transform: uppercase;
+
+    margin-bottom: 1.6rem;
+}
+
+#services header h2{
+    font-size: 3rem;
+    line-height: 3.9rem;
+
+    color: var(--headline);
+
+    margin-bottom: 6rem;
+}
+
+#services .cards{
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+#services .card {
+    padding: 2.4rem;
+    text-align: left;
+
+    background: white;
+    border: 1px solid var(--brand-light);
+    border-radius: .6rem;
+}
+
+#services .card h3{
+    margin-block: 1.6rem;
 }
