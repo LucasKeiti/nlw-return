@@ -1,3 +1,5 @@
+windows.addEventListener('scroll', onScroll)
+
 function onScroll() {
     showNavOnScroll()
     showBackToTopButtonOnScroll()
@@ -13,9 +15,9 @@ function showNavOnScroll() {
 
     function showBackToTopButtonOnScroll() {
         if(scrollY > 500) {
-            navigation.classList.add ('show')
+            backToTopButton.classList.add ('show')
             } else {
-                navigation.classList.remove('show')
+                backToTopButton.classList.remove('show')
             }
         }
 
