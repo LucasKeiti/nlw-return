@@ -144,12 +144,12 @@
     fill: var(--primary-color);
   }
 
-  button.open-menu path[stroke*='#00856F'],
+  button.open-menu path[stroke*="#00856F"],
   #contact li path {
     stroke: var(--primary-color);
   }
 
-  body.menu-expanded #navigation.logo path,
+  body.menu-expanded #navigation .logo path,
   #navigation.scroll .logo path {
     fill: white;
   }
@@ -267,7 +267,7 @@
     color: var(--primary-color);
   
     display: inline-block;
-    padding: 16px 32px;
+    padding: 1.6rem 3.2rem;
   
     margin-top: 4.8rem;
     margin-bottom: 8rem;
@@ -472,9 +472,12 @@
 
     opacity: 0;
     visibility: hidden;
+    transform:translateY(100%);
+    transition: 200ms;
   }
 
   #backToTopButton.show {
     opacity: 1;
     visibility: visible;
+    transform:translateY(0);
   }
