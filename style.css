@@ -304,13 +304,14 @@
   
   /*=== #HOME =================================*/
   #home {
+    padding-block: 0;
     padding-top: calc(4.1rem + var(--nav-height));
   }
   
   #home::before {
     content: '';
     width: 100%;
-    height: calc(108rem + var(--nav-height));
+    height: calc(76% + var(--nav-height));
     background-color: var(--brand-light);
     display: block;
   
@@ -491,10 +492,32 @@
   @media (min-width: 102.4rem){
 
     /*==========GERAL====================*/
+    body {
+      overflow: auto;
+    }
+
     .wrapper{
       width: min(112rem, 100%);
       display: grid;
     }
+
+    .col-a {
+      grid-area: A;
+    }
+
+    .col-b {
+      grid-area: B;
+    }
+
+    section {
+      padding-block: 16rem;
+    }
+
+    section h2 {
+      font-size: 4rem;
+      line-height: 5.2rem;
+    }
+
     /*==========NAVIGATION====================*/
 
     /* reset */
@@ -620,6 +643,14 @@
 
     /*===========HOME ==========*/
 
+    #home::before {
+      height: calc(96% - var(--nav-height));
+    }
+
+    #home {
+      padding-top: var(--nav-height);
+    }
+
     #home .wrapper {
       grid-template-columns: 60.rem 1fr;
       grid-template-areas: 
@@ -627,13 +658,11 @@
       'C C';
     }
     #home .col-a {
-      grid-area: A;
       text-align: left;
+      align-self: center;
     }
 
-    #home .col-b {
-      grid-area: B;
-    }
+   
 
     #home h1 {
       font-size: 5.2rem;
@@ -666,4 +695,47 @@
     #home img { 
       width: 42rem;
     }
-  }
+
+    /*============SERVICES =============*/
+
+    #services h2{
+      width: 47rem;
+      margin-inline: auto;
+    }
+
+    #services .cards {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 4rem;
+    }
+
+    #services .card{
+      width: 30%;
+      flex-grow: 1;
+    }
+
+    /*=========== ABOUT ============*/
+    #about .wrapper {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 'B A';
+      gap: 6.7rem;
+    }
+
+    #about .col-a{
+      align-self: center;
+    }
+
+    #about .content p {
+      margin-bottom: 0;
+    }
+/*========= CONTACT ===========================*/
+
+#contact .wrapper{
+  grid-template-columns: 1fr 57.5rem;
+  grid-template-areas: 'A B';
+}
+
+#contact h2 {
+  width: 40.4rem;
+}
+}
