@@ -513,7 +513,7 @@
       padding-block: 16rem;
     }
 
-    section h2 {
+    section header h2 {
       font-size: 4rem;
       line-height: 5.2rem;
     }
@@ -738,4 +738,28 @@
 #contact h2 {
   width: 40.4rem;
 }
+
+/*==========FOOTER=======================*/
+footer {
+  padding-block: 8rem;
+}
+
+footer.wrapper{
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'A B';
+}
+
+footer .col-a {
+  align-self: center;
+}
+
+footer .col-b {
+  align-self: center;
+  justify-self: flex-end;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
 }
