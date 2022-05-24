@@ -5,7 +5,9 @@ function onScroll() {
     showNavOnScroll()
     showBackToTopButtonOnScroll()
     activateMenuAtCurrentSection(home)
-    //activateMenuAtCurrentSection(services)
+    activateMenuAtCurrentSection(services)
+    activateMenuAtCurrentSection(about)
+    activateMenuAtCurrentSection(contact)
 }
 
 function activateMenuAtCurrentSection(section){
@@ -37,8 +39,12 @@ function activateMenuAtCurrentSection(section){
     //limites da seção
     const sectionBoundaries = sectionTopReachOrPassedTargetline && !sectionEndPassedTargetline
 
+const sectionId = section.getAttribute ('id')
+    const menuElement = document.querySelector(`.menu a [href*=${sectionId}]`)
+
+    menuElement.classList.remove('active')
     if(sectionBoundaries) {
-        console.log('estou na seção HOME')
+        menuElement.classList.add('active')
     }
 
 }
