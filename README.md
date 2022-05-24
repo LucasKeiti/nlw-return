@@ -14,6 +14,12 @@
 
 A NLW Return - DoctorCare é uma página institucional em formato One Page, responsiva, para ser utilizada em diversos tipos de micro, pequenas e médias empresas. Contém as seguintes seções: Cabeçalho, Navegação, Home, Sobre, Serviços e Rodapé.
 
+## 🔍Tecnologias
+
+- HTML
+- CSS
+- JavaScript
+- [ScrollReveal](https://scrollrevealjs.org)
 
 
 ## 📝 Licença
