@@ -311,7 +311,7 @@
   #home::before {
     content: '';
     width: 100%;
-    height: calc(76% + var(--nav-height));
+    height: calc(6% + var(--nav-height));
     background-color: var(--brand-light);
     display: block;
   
@@ -468,6 +468,7 @@
 
   footer .social-links {
     justify-content: flex-start;
+    margin-top: 5rem;
   }
 
   /* BACK TO TOP */
@@ -652,7 +653,7 @@
     }
 
     #home .wrapper {
-      grid-template-columns: 60.rem 1fr;
+      grid-template-columns: 60.5rem 1fr;
       grid-template-areas: 
       'A B'
       'C C';
@@ -716,7 +717,7 @@
 
     /*=========== ABOUT ============*/
     #about .wrapper {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 48rem 1fr;
       grid-template-areas: 'B A';
       gap: 6.7rem;
     }
