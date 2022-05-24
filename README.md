@@ -10,7 +10,14 @@
  <img alt="GitHub" src="https://img.shields.io/github/license/LucasKeiti/nlw-return">
 </p>
 
-##
+## 📝 Licença
 
-Author: Lucas Keiti
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+🌀 Linkedin: https://www.linkedin.com/in/lucas-keiti-8a93a3231/
+
+
+Autor: Lucas Keiti
 
