@@ -10,6 +10,16 @@
  <img alt="GitHub" src="https://img.shields.io/github/license/LucasKeiti/nlw-return">
 </p>
 
+<p align="center">
+  
+  Desktop Main Page
+  <img alt="DoctorCare" src="Preview1.jpg" width="100%">
+  Mobile Main Page
+  <img alt="DoctorCare" src="Preview2.jpg" width="100%">
+  Mobile Menu
+  <img alt="DoctorCare" src="Preview3.jpg" width="100%">
+</p>
+
 ## 💻 Sobre o Projeto
 
 A NLW Return - DoctorCare é uma página institucional em formato One Page, responsiva, para ser utilizada em diversos tipos de micro, pequenas e médias empresas. Contém as seguintes seções: Cabeçalho, Navegação, Home, Sobre, Serviços e Rodapé.
