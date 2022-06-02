@@ -14,8 +14,10 @@
   
   Desktop Main Page
   <img alt="DoctorCare" src="Preview1.jpg" width="100%">
+  
   Mobile Main Page
   <img alt="DoctorCare" src="Preview2.jpg" width="100%">
+  
   Mobile Menu
   <img alt="DoctorCare" src="Preview3.jpg" width="100%">
 </p>
